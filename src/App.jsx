@@ -26,8 +26,8 @@ function App() {
   return (
     <div className='container flex flex-col justify-center items-center min-h-screen px-5'>
       <h2 className='text-lg font-bold mb-5 mt-5'>This is an Image Framing App. Upload your image and it will be framed using the peaceJam custom frame</h2>
-      <label htmlFor='uploadFile' className='relative h-32 w-96 mb-5 rounded-2xl cursor-pointer' style={{ backgroundColor: '#f6ff21' }}>
-        <div className='absolute top-0 left-0 w-full h-full flex justify-center items-center'>
+      <label htmlFor='uploadFile' className='relative h-32 w-64 mb-5 rounded-2xl cursor-pointer md:w-96' style={{ backgroundColor: '#f6ff21' }}>
+        <div className='absolute top-0 left-0 w-full h-full flex justify-center items-center px-5'>
           <p className='text-center pe-2'>Click or drag something here to upload</p>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15m0-3l-3-3m0 0l-3 3m3-3V15" />
