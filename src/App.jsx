@@ -29,12 +29,6 @@ function App() {
         })
       }
     });
-    // resizeFile(uploadedImage).then(upload => {
-    //   mergeImages([{ src: upload, x: (1200-img.width)/2, y: (1200-img.height)/3 }, { src: assets.peaceJamFrame, x: 0, y: 0 }])
-    //   .then(image => {
-    //     setImage(image);
-    //   });
-    // })
   }
 
   return (
