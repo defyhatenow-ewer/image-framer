@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import mergeImages from 'merge-images';
-import resizeFile, { expandFile } from './resize';
+import resizeFile from './resize';
 import assets from './assets';
 
 function App() {
@@ -11,23 +11,14 @@ function App() {
     const img = new Image();
     img.src = URL.createObjectURL(uploadedImage);
     img.decode().then(() => {
-      if (img.width > 1050 || img.height > 1050){
-        resizeFile(uploadedImage).then(upload => {
-          const newImg = new Image();
-          newImg.src = upload;
-          mergeImages([{ src: upload, x: (1200-newImg.width)/2, y: (1200-newImg.height)/3 }, { src: assets.peaceJamFrame, x: 0, y: 0 }])
+      resizeFile(uploadedImage, img.height, img.width).then(upload => {
+        const newImg = new Image();
+        newImg.src = upload;
+        mergeImages([{ src: upload, x: (1200-newImg.width)/2, y: (1200-newImg.height)/3 }, { src: assets.peaceJamFrame, x: 0, y: 0 }])
           .then(image => {
             setImage(image);
-          });
-        })
-      } else {
-        expandFile(uploadedImage).then(upload => {
-          mergeImages([{ src: upload, x: 75, y: 25 }, { src: assets.peaceJamFrame, x: 0, y: 0 }])
-          .then(image => {
-            setImage(image);
-          });
-        })
-      }
+        });
+      });
     });
   }
 
