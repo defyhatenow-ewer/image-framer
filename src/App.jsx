@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className='container flex flex-col justify-center items-center min-h-screen px-5'>
-      <h2 className='text-lg font-bold mb-5 mt-5'>Upload your photo to create a peacejam-framed social media profile picture.</h2>
+      <h2 className='text-lg text-center font-bold mb-5 mt-5'>Upload your photo to create a peacejam-framed social media profile picture.</h2>
       <label htmlFor='uploadFile' className='relative h-16 w-64 mb-5 rounded-2xl cursor-pointer md:w-96' style={{ backgroundColor: '#f6ff21' }}>
         <div className='absolute top-0 left-0 w-full h-full flex justify-center items-center px-5'>
           <p className='text-center pe-2'>Click or drag your photo here to upload</p>
