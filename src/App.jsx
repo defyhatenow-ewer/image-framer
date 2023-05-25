@@ -24,17 +24,15 @@ function App() {
       {uploadedImage && image && (
         <div className='flex justify-center gap-10 items-center'>
           <div className='flex flex-col text-center'>
-            <img src={URL.createObjectURL(uploadedImage)} className="h-96 w-72" alt='uploaded image' />
+            <img src={URL.createObjectURL(uploadedImage)} className="h-96 w-auto rounded" alt='uploaded image' />
           </div>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
           </svg>
-          <div className='flex flex-col items-center'>
-            <a href={image} download="image.png" className='flex flex-col items-center'>
-              <img src={image} className="h-96 w-96 mb-3" />
-              <p className='text-base text-center border border-black text-blue-700 px-3 py-1 rounded hover:bg-black hover:text-white max-w-fit'>Download</p>
-            </a>
-          </div>
+          <a href={image} download="image.png" className='flex flex-col items-center'>
+            <img src={image} className="h-96 w-96 mb-3" />
+            <p className='text-base text-center border border-black text-blue-700 px-3 py-1 rounded hover:bg-black hover:text-white max-w-fit'>Download</p>
+          </a>
         </div>
       )}
     </div>
