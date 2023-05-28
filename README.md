@@ -20,3 +20,6 @@ The image framer app will run locally on
 ```sh
 http://localhost:5173/
 ```
+Have fun and #defyhatenow!!!, check us out at;
+##https://defyhatenow.org/
+ 
