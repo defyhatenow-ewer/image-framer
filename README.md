@@ -1,4 +1,4 @@
-# image-framer
+# #defyhatenow image-framer
 Getting started
 
 Clone this repo
@@ -17,4 +17,6 @@ Start the local server
   npm run dev
   ```
 The image framer app will run locally on
-### http://localhost:5173/
+```sh
+http://localhost:5173/
+```
