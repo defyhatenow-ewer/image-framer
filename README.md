@@ -3,7 +3,7 @@ Getting started
 
 Clone this repo
 ```sh
-### git clone https://github.com/defyhatenow-ewer/image-framer.git 
+git clone https://github.com/defyhatenow-ewer/image-framer.git 
 ```
 
 Install all req'd dependencies
