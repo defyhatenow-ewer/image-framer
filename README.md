@@ -1,8 +1,17 @@
 # image-framer
 Getting started
 
-To get the frontend running locally:
+Clone this repo
 
-    Clone this repo
-    npm install to install all req'd dependencies
-    npm run dev to start the local server (this image framer app)
+### git clone https://github.com/defyhatenow-ewer/image-framer.git 
+
+Install all req'd dependencies
+
+### npm install
+
+Start the local server
+
+### npm run dev
+
+The image framer app will run locally on
+### http://localhost:5173/
