@@ -7,11 +7,15 @@ Clone this repo
 
 Install all req'd dependencies
 
-### npm install
-
+ ```sh
+  npm install
+  
+  ```
 Start the local server
 
-### npm run dev
+ ```sh
+  npm run dev
 
+  ```
 The image framer app will run locally on
 ### http://localhost:5173/
