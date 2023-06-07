@@ -21,14 +21,6 @@ const frames = [
     uploadText: "Téléchargez votre photo pour créer une image de profil de média social encadrée par Peacejam",
     uploadPrompt: "Cliquez ou faites glisser votre photo ici pour la télécharger",
   },
-  {
-    src: assets.peaceJam2023EN,
-    language: "EN",
-    clickText: "Click me",
-    downloadText: "Download",
-    uploadText: "Upload your photo to create a peacejam-framed social media profile picture",
-    uploadPrompt: "Click or drag your photo here to upload",
-  },
 ];
 
 function App() {
