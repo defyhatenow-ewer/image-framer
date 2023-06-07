@@ -21,6 +21,14 @@ const frames = [
     uploadText: "Téléchargez votre photo pour créer une image de profil de média social encadrée par Peacejam",
     uploadPrompt: "Cliquez ou faites glisser votre photo ici pour la télécharger",
   },
+  {
+    src: assets.peaceJam2023EN,
+    language: "EN",
+    clickText: "Click me",
+    downloadText: "Download",
+    uploadText: "Upload your photo to create a peacejam-framed social media profile picture",
+    uploadPrompt: "Click or drag your photo here to upload",
+  },
 ];
 
 function App() {
@@ -48,9 +56,9 @@ function App() {
     <div className='container flex flex-col justify-center items-center min-h-screen px-5'>
 
       {!frame && (
-        <div className='flex flex-col md:flex-row justify-between items-center gap-10 mt-5 md:mt-0'>
+        <div className='flex flex-col md:flex-row justify-between items-center gap-10 mt-5 md:mt-0 md:w-4/5'>
           {frames.map((f, i) => (
-            <div key={i} className={`cursor-pointer md:w-64 relative z-0 transition ease-in-out delay-150 hover:scale-110`} onClick={() => {
+            <div key={i} className={`cursor-pointer md:w-1/${frames.length} relative z-0 transition ease-in-out delay-150 hover:scale-110`} onClick={() => {
               setFrame(f.src);
               setIndex(i);
             }}>
