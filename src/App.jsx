@@ -5,16 +5,27 @@ import assets from './assets';
 import { Spinner, ArrowDown, ArrowUp, Upload, ArrowLeft } from './Icons';
 
 const frames = [
-  assets.peaceJam2023EN,
-  assets.peaceJam2023FR,
-  assets.peaceJam2023EN,
-  assets.peaceJam2023FR,
+  {
+    src: assets.peaceJam2023EN,
+    language: "EN",
+    downloadText: "Download",
+    uploadText: "Upload your photo to create a peacejam-framed social media profile picture",
+    uploadPrompt: "Click or drag your photo here to upload",
+  },
+  {
+    src: assets.peaceJam2023FR,
+    language: "FR",
+    downloadText: "Télécharger",
+    uploadText: "Téléchargez votre photo pour créer une image de profil de média social encadrée par Peacejam",
+    uploadPrompt: "Cliquez ou faites glisser votre photo ici pour la télécharger",
+  }
 ];
 
 function App() {
   const [frame, setFrame] = useState(null);
   const [uploadedImage, setUploadedImage] = useState(null);
   const [mergedImage, setMergedImage] = useState(null);
+  const [index, setIndex] = useState(0);
 
   if (uploadedImage) {
     const img = new Image();
@@ -36,7 +47,10 @@ function App() {
 
       {!frame && (
         <div className='flex flex-col md:flex-row justify-between items-center gap-10 mt-5 md:mt-0'>
-          {frames.map((f, i) => <img src={f} alt='frame' key={i} className='md:h-64 md:w-64 cursor-pointer' onClick={() => setFrame(f)} />)}
+          {frames.map((f, i) => <img src={f.src} alt='frame' key={i} className='md:h-64 md:w-64 cursor-pointer' onClick={() => {
+            setFrame(f.src);
+            setIndex(i);
+          }} />)}
         </div>
       )}
 
@@ -52,14 +66,14 @@ function App() {
             <ArrowUp />
             <a href={mergedImage} download="image.png" className='flex flex-col items-center'>
               <img src={mergedImage} className="mb-3 md:h-96" />
-              <p className='text-base text-center border border-black text-black px-3 py-1 rounded bg-yellow-300 hover:bg-black hover:text-white max-w-fit'>Download</p>
+              <p className='text-base text-center border border-black text-black px-3 py-1 rounded bg-yellow-300 hover:bg-black hover:text-white max-w-fit'>{frames[index].downloadText}</p>
             </a>
           </div>
         )}
-        <h2 className='text-lg text-center font-bold mb-5 mt-5'>Upload your photo to create a peacejam-framed social media profile picture</h2>
+        <h2 className='text-lg text-center font-bold mb-5 mt-5'>{frames[index].uploadText}</h2>
         <label htmlFor='uploadFile' className='relative h-16 w-64 mb-5 rounded-2xl cursor-pointer md:w-96' style={{ backgroundColor: '#f6ff21' }}>
           <div className='absolute top-0 left-0 w-full h-full flex justify-center items-center px-5'>
-            <p className='text-center pe-2'>Click or drag your photo here to upload</p>
+            <p className='text-center pe-2'>{frames[index].uploadPrompt}</p>
             <Upload />
           </div>
           <input id='uploadFile' type='file' name='uploadedImage' onChange={(e) => {
