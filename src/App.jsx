@@ -20,7 +20,7 @@ const frames = [
     downloadText: "Télécharger",
     uploadText: "Téléchargez votre photo pour créer une image de profil de média social encadrée par Peacejam",
     uploadPrompt: "Cliquez ou faites glisser votre photo ici pour la télécharger",
-  }
+  },
 ];
 
 function App() {
@@ -50,11 +50,11 @@ function App() {
       {!frame && (
         <div className='flex flex-col md:flex-row justify-between items-center gap-10 mt-5 md:mt-0'>
           {frames.map((f, i) => (
-            <div key={i} className='cursor-pointer md:h-64 md:w-64 relative z-0 hover:scale-110' onClick={() => {
+            <div key={i} className='cursor-pointer md:frame-img relative z-0 hover:scale-110' onClick={() => {
               setFrame(f.src);
               setIndex(i);
             }}>
-              <img src={f.src} alt='frame' className='md:h-64 md:w-64 cursor-pointer' />
+              <img src={f.src} alt='frame' className='cursor-pointer' />
               <div className="absolute inset-0 flex justify-center items-center z-10">
                 <p className="text-2xl font-bold">{f.clickText}</p>
               </div>
