@@ -45,7 +45,7 @@ function App() {
   }
 
   return (
-    <div className='container flex flex-col justify-center items-center min-h-screen px-5'>
+    <div className='flex flex-col justify-center items-center min-h-screen px-5'>
 
       {!frame && (
         <div className='flex flex-col md:flex-row justify-center items-center gap-10 mt-5 md:mt-0 md:w-4/5'>
