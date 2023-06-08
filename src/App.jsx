@@ -48,7 +48,7 @@ function App() {
     <div className='container flex flex-col justify-center items-center min-h-screen px-5'>
 
       {!frame && (
-        <div className='flex flex-col md:flex-row justify-between items-center gap-10 mt-5 md:mt-0 md:w-4/5'>
+        <div className='flex flex-col md:flex-row justify-center items-center gap-10 mt-5 md:mt-0 md:w-4/5'>
           {frames.map((f, i) => (
             <div key={i} className={`cursor-pointer md:w-1/${frames.length} relative z-0 transition ease-in-out delay-150 hover:scale-110`} onClick={() => {
               setFrame(f.src);
